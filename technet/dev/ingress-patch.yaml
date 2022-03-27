@@ -1,0 +1,52 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: technet
+  annotations:
+    nginx.ingress.kubernetes.io/server-snippet: |
+      if ($remote_addr != "182.208.21.16") { # ePapyrus HQ
+        set $unauthorized IP;
+      }
+
+      if ($http_x_epapyrus_private_network != "SandCanyon") {
+        set $unauthorized "${unauthorized},VPN";
+      }
+
+      if ($unauthorized = "IP,VPN") {
+        return 302 https://technet.epapyrus.com$request_uri;
+      }
+spec:
+  tls:
+  - hosts:
+    - technet.hq.epapyrus.com
+    secretName: technet.hq.epapyrus.com-tls
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pdf-gateway-doc
+spec:
+  tls:
+  - hosts:
+    - technet.hq.epapyrus.com
+    secretName: technet.hq.epapyrus.com-tls
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: streamdocs-doc
+spec:
+  tls:
+  - hosts:
+    - technet.hq.epapyrus.com
+    secretName: technet.hq.epapyrus.com-tls
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: streamdocs-tutorial
+spec:
+  tls:
+  - hosts:
+    - technet.hq.epapyrus.com
+    secretName: technet.hq.epapyrus.com-tls

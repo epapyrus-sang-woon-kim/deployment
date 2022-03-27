@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: homepage-demo
+  namespace: homepage-demo
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/server-snippet: |
+      location /demo/textsense {
+        rewrite ^/demo/textsense(.*)$ /api$1 break;
+        proxy_pass https://textsense.epapyrus.com;
+      }
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - demo.epapyrus.com
+      secretName: demo.epapyrus.com-tls
+  rules:
+    - host: demo.epapyrus.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: homepage
+                port:
+                  number: 80
+          - path: /demo/streamdocs
+            pathType: Prefix
+            backend:
+              service:
+                name: streamdocs
+                port:
+                  number: 8080
+          - path: /demo/streamdocs-vu
+            pathType: Prefix
+            backend:
+              service:
+                name: streamdocs-vu
+                port:
+                  number: 8080

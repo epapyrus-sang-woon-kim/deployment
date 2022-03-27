@@ -1,0 +1,39 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: technet
+spec:
+  tls:
+  - hosts:
+    - technet.epapyrus.com
+    secretName: technet.epapyrus.com-tls
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pdf-gateway-doc
+spec:
+  tls:
+  - hosts:
+    - technet.epapyrus.com
+    secretName: technet.epapyrus.com-tls
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: streamdocs-doc
+spec:
+  tls:
+  - hosts:
+    - technet.epapyrus.com
+    secretName: technet.epapyrus.com-tls
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: streamdocs-tutorial
+spec:
+  tls:
+  - hosts:
+    - technet.epapyrus.com
+    secretName: technet.epapyrus.com-tls

@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: webhookepapyruscom
+  namespace: default
+spec:
+  serviceName: webhookepapyruscom
+  replicas: 1
+  selector:
+    matchLabels:
+      service: webhook.epapyrus.com
+  template:
+    metadata:
+      labels:
+        service: webhook.epapyrus.com
+    spec:
+      containers:
+        - name: webhook-server
+          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/utils:webhook-server
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DATABASE_HOST
+              value: localhost
+            - name: DATABASE_PORT
+              value: '3306'
+            - name: DATABASE_USER
+              value: master
+            - name: DATABASE_PASSWORD
+              value: master
+            - name: DATABASE_NAME
+              value: webhook
+            - name: CODE_REVIEW_FOLDER_ID
+              value: IEAAOKQMI4WEDNQH # https://www.wrike.com/open.htm?id=742503943
+            - name: CODE_REVIEW_CUSTOM_FIELD_ID
+              value: IEAAOKQMJUACPXBZ # Gitlab URL
+            - name: CODE_REVIEW_REVIEWING_STATUS_ID
+              value: IEAAOKQMJMCH7XPY # 리뷰중
+            - name: CODE_REVIEW_COMPLETED_STATUS_ID
+              value: IEAAOKQMJMCH7XPZ # 리뷰종료
+        - name: mariadb
+          image: mariadb:10.7.3
+          args:
+            - --character-set-server=utf8
+            - --collation-server=utf8_general_ci
+          env:
+            - name: MARIADB_RANDOM_ROOT_PASSWORD
+              value: "true"
+            - name: MARIADB_USER
+              value: master
+            - name: MARIADB_PASSWORD
+              value: master
+            - name: MARIADB_DATABASE
+              value: webhook
+          volumeMounts:
+            - name: storage
+              mountPath: /var/lib/mysql
+              subPath: ./mariadb
+  volumeClaimTemplates:
+    - metadata:
+        name: storage
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        storageClassName: ebs
+        resources:
+          requests:
+            storage: 2Gi

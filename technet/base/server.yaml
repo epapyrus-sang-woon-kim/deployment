@@ -1,0 +1,87 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: server
+spec:
+  ports:
+  - protocol: TCP
+    port: 8080
+  selector:
+    app: server
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: server
+spec:
+  serviceName: server
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+      - name: technet
+        image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: WAIT_FOR_IT
+          value: localhost:3306
+        - name: STREAMDOCS_DOC_VERSION
+          value: 5.11.4.0
+        - name: PDF_GATEWAY_DOC_VERSION
+          value: 10.11.0.10
+        - name: DOC_FETCH_SCHEUDLE
+          value: 0 0 0 * * *
+        - name: DOC_FETCH_COOLDOWN
+          value: "0"
+        - name: BOARD_FETCH_SCHEUDLE
+          value: 0 0 0 * * *
+        volumeMounts:
+        - name: storage
+          mountPath: /ePapyrus/technet
+          subPath: ./technet
+        - name: technet-doc
+          mountPath: /streamdocs
+          subPath: ./streamdocs
+        - name: technet-doc
+          mountPath: /pdf-gateway
+          subPath: ./pdf-gateway
+      - name: mariadb
+        image: mariadb:10.7.3
+        args:
+        - --character-set-server=utf8
+        - --collation-server=utf8_general_ci
+        env:
+        - name: MARIADB_RANDOM_ROOT_PASSWORD
+          value: "true"
+        - name: MARIADB_USER
+          value: master
+        - name: MARIADB_PASSWORD
+          value: master
+        - name: MARIADB_DATABASE
+          value: technet
+        volumeMounts:
+        - name: storage
+          mountPath: /var/lib/mysql
+          subPath: ./mariadb
+      volumes:
+        - name: technet-doc
+          persistentVolumeClaim:
+            claimName: technet-doc
+  volumeClaimTemplates:
+  - metadata:
+      name: storage
+    spec:
+      accessModes:
+      - ReadWriteOnce
+      storageClassName: ebs
+      resources:
+        requests:
+          storage: 2Gi

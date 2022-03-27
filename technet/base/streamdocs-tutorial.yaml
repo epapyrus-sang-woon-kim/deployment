@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: streamdocs-tutorial
+spec:
+  ports:
+  - protocol: TCP
+    port: 8080
+  selector:
+    app: streamdocs-tutorial
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamdocs-tutorial
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streamdocs-tutorial
+  template:
+    metadata:
+      labels:
+        app: streamdocs-tutorial
+    spec:
+      containers:
+      - name: streamdocs-tutorial
+        image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/utils:technet-streamdocs-tutorial
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: JAVA_OPTS
+          value: |
+            -Dfile.encoding=utf-8
+            -Dserver.port=8080
+            -Dtechnet.streamdocs.server.path=https://test-api.technet.epapyrus.com/streamdocs
+            -Dcom.epapyrus.pdf.sd.client.auth.id=epapyrus
+            -Dcom.epapyrus.pdf.sd.client.auth.password=epapyrus12#$

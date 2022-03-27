@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: gitlabepapyruscom
+  namespace: default
+spec:
+  serviceName: gitlabepapyruscom
+  replicas: 1
+  selector:
+    matchLabels:
+      service: gitlab.epapyrus.com
+  template:
+    metadata:
+      labels:
+        service: gitlab.epapyrus.com
+    spec:
+      hostname: gitlab.epapyrus.com
+      containers:
+        - name: gitlab
+          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/gitlab-ee:14.8.3-ee.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 22
+            - containerPort: 80
+          volumeMounts:
+            - name: storage
+              mountPath: /var/opt/gitlab
+              subPath: ./var/opt/gitlab
+            - name: storage
+              mountPath: /var/log/gitlab
+              subPath: ./var/log/gitlab
+            - name: storage
+              mountPath: /etc/gitlab
+              subPath: ./etc/gitlab
+            - name: shmdir
+              mountPath: /dev/shm
+      volumes:
+        - name: shmdir
+          emptyDir:
+            medium: Memory
+            sizeLimit: 256M
+  volumeClaimTemplates:
+    - metadata:
+        name: storage
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        storageClassName: ebs
+        resources:
+          requests:
+            storage: 20Gi

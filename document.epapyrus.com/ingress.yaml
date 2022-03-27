@@ -1,0 +1,66 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: documentepapyruscom-streamdocs
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/app-root: /streamdocs/view/documents
+    nginx.ingress.kubernetes.io/server-snippet: |
+      location ~ /streamdocs/v4/documents/([^/]*)$ {
+        if ($request_method = GET) {
+          return 401;
+        }
+      }
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - document.epapyrus.com
+    secretName: document.epapyrus.com-tls
+  rules:
+    - host: document.epapyrus.com
+      http:
+        paths:
+          - path: /streamdocs
+            pathType: Prefix
+            backend:
+              service:
+                name: documentepapyruscom-streamdocs
+                port:
+                  number: 80
+          - path: /streamdocs/v4
+            pathType: Prefix
+            backend:
+              service:
+                name: documentepapyruscom-streamdocs
+                port:
+                  number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: documentepapyruscom-auth
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: documentepapyruscom-auth
+    nginx.ingress.kubernetes.io/auth-realm: Admin
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - document.epapyrus.com
+    secretName: document.epapyrus.com-tls
+  rules:
+    - host: document.epapyrus.com
+      http:
+        paths:
+          - path: /streamdocs/view/documents/admin
+            pathType: Prefix
+            backend:
+              service:
+                name: documentepapyruscom-streamdocs
+                port:
+                  number: 80

@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: npmepapyruscom
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - npm.epapyrus.com
+    secretName: npm.epapyrus.com-tls
+  rules:
+    - host: npm.epapyrus.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: npmepapyruscom
+                port:
+                  number: 80

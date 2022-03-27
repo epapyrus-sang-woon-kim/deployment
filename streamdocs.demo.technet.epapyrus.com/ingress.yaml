@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: streamdocsdemotechnetepapyruscom-streamdocs
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - streamdocs.demo.technet.epapyrus.com
+    secretName: streamdocs.demo.technet.epapyrus.com-tls
+  rules:
+    - host: streamdocs.demo.technet.epapyrus.com
+      http:
+        paths:
+          - path: /streamdocs
+            pathType: Prefix
+            backend:
+              service:
+                name: streamdocsdemotechnetepapyruscom-streamdocs
+                port:
+                  number: 80

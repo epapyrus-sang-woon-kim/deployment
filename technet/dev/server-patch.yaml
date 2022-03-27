@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: server
+spec:
+  template:
+    spec:
+      containers:
+      - name: technet
+        env:
+        - name: ELASTICSERARCH_HOST
+          value: elasticsearch.technet-dev.svc.cluster.local

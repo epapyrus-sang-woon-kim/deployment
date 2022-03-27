@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fg-demo
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/app-root: /fg/view/auth
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - fg.demo.epapyrus.com
+      secretName: fg.demo.epapyrus.com-tls
+  rules:
+    - host: fg.demo.epapyrus.com
+      http:
+        paths:
+          - path: /streamdocs
+            pathType: Prefix
+            backend:
+              service:
+                name: fg-demo-streamdocs
+                port:
+                  number: 8080
+          - path: /fg
+            pathType: Prefix
+            backend:
+              service:
+                name: fg-demo-form-gateway
+                port:
+                  number: 8080

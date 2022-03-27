@@ -1,0 +1,80 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fg-demo-form-gateway
+  namespace: default
+spec:
+  ports:
+    - protocol: TCP
+      port: 8080
+  selector:
+    service: fg-demo
+    app: form-gateway
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: fg-demo-form-gateway
+  namespace: default
+spec:
+  serviceName: fg-demo-form-gateway
+  replicas: 1
+  selector:
+    matchLabels:
+      service: fg-demo
+      app: form-gateway
+  template:
+    metadata:
+      labels:
+        service: fg-demo
+        app: form-gateway
+    spec:
+      containers:
+        - name: form-gateway
+          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/form-gateway:fg.demo.epapyrus.com--fg
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          env:
+          - name: WAIT_FOR_IT
+            value: localhost:3306
+          - name: MARIADB_USER
+            value: master
+          - name: MARIADB_PASSWORD
+            value: master
+          - name: FG_DATABASE
+            value: form-gateway
+          - name: STREAMDOCS_BASE_URL
+            value: http://fg-demo-streamdocs.default.svc.cluster.local:8080/streamdocs/
+          volumeMounts:
+            - name: storage
+              mountPath: /ePapyrus/fg
+              subPath: ./form-gateway
+        - name: mariadb
+          image: mariadb:10.7.3
+          args:
+            - --character-set-server=utf8
+            - --collation-server=utf8_general_ci
+          env:
+            - name: MARIADB_RANDOM_ROOT_PASSWORD
+              value: "true"
+            - name: MARIADB_USER
+              value: master
+            - name: MARIADB_PASSWORD
+              value: master
+            - name: MARIADB_DATABASE
+              value: form-gateway
+          volumeMounts:
+            - name: storage
+              mountPath: /var/lib/mysql
+              subPath: ./mariadb
+  volumeClaimTemplates:
+    - metadata:
+        name: storage
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        storageClassName: ebs
+        resources:
+          requests:
+            storage: 4Gi

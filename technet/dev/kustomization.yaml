@@ -1,0 +1,55 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: technet-dev
+images:
+- name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
+  newTag: snapshot-73bc337de5ce421750abaa51c65566df652f23eb
+- name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
+  newTag: snapshot-e0518d4f7856186ed4491f3b1bcb8aa513632570
+- name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
+  newTag: snapshot-1406da637d7e5f0357e1d1998d72521e4fb20c56
+- name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
+  newTag: snapshot-1406da637d7e5f0357e1d1998d72521e4fb20c56
+patchesStrategicMerge:
+- ./ingress-patch.yaml
+- ./server-patch.yaml
+- ./technet-doc-volume-patch.yaml
+patchesJson6902:
+- patch: |
+    - op: replace
+      path: /spec/rules/0/host
+      value: technet.hq.epapyrus.com
+  target:
+    kind: Ingress
+    name: technet
+- patch: |
+    - op: replace
+      path: /spec/rules/0/host
+      value: technet.hq.epapyrus.com
+  target:
+    kind: Ingress
+    name: pdf-gateway-doc
+- patch: |
+    - op: replace
+      path: /spec/rules/0/host
+      value: technet.hq.epapyrus.com
+  target:
+    kind: Ingress
+    name: streamdocs-doc
+- patch: |
+    - op: replace
+      path: /spec/rules/0/host
+      value: technet.hq.epapyrus.com
+  target:
+    kind: Ingress
+    name: streamdocs-tutorial
+- patch: |
+    - op: replace
+      path: /subsets/0/addresses/0/ip
+      value: 182.208.21.16
+  target:
+    kind: Endpoints
+    name: technet
+resources:
+- ../base
