@@ -4,8 +4,12 @@ metadata:
   name: gitlabepapyruscom
   namespace: default
   annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: external
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: instance
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
     external-dns.alpha.kubernetes.io/hostname: gitlab.epapyrus.com
 spec:
+  externalTrafficPolicy: Local
   type: LoadBalancer
   ports:
     - name: http
