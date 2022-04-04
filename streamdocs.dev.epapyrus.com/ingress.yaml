@@ -6,6 +6,7 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/app-root: /streamdocs/view/welcome
+    nginx.ingress.kubernetes.io/proxy-body-size: 100M
 spec:
   ingressClassName: nginx
   tls:
