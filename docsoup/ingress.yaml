@@ -1,0 +1,50 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: docsoup-client
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - docsoup.io
+    secretName: docsoup.io-tls
+  rules:
+  - host: docsoup.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: docsoup-client
+            port:
+              number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: docsoup-server
+  namespace: default
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/rewrite-target: $1
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - docsoup.io
+    secretName: docsoup.io-tls
+  rules:
+  - host: docsoup.io
+    http:
+      paths:
+      - path: /api(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: docsoup-server
+            port:
+              number: 8080

@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: docsoup-server
+  namespace: default
+spec:
+  ports:
+  - protocol: TCP
+    port: 8080
+  selector:
+    app: docsoup-server
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docsoup-server
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docsoup-server
+  template:
+    metadata:
+      labels:
+        app: docsoup-server
+    spec:
+      containers:
+      - name: docsoup-server
+        image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/docsoup:server
+        imagePullPolicy: Always
+        env:
+        - name: SENDER_EMAIL
+          value: develop@epapyrus.com
+        - name: SENDER_PASSWORD
+          value: wjsroddl12#$#$
+        - name: RECEIVER_EMAIL
+          value: support@epapyrus.com
+        ports:
+        - containerPort: 8080
