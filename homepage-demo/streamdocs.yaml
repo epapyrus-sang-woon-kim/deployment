@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: streamdocs
-          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs:5.11.12.0
+          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs:5.11.13.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
