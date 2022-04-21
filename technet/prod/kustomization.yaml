@@ -6,11 +6,11 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
   newTag: release-1c8d85359dc5c70bbcb409f3badd1e37b955a2fa
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
-  newTag: release-cd5f1c5ca2e546d379ba5ad5c061b8eb37835e33
+  newTag: release-23dc9d1fcd331cd649732977e60a9f64c123f0bf
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: 2.1.5
+  newTag: 2.2.0
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: 2.1.5
+  newTag: 2.2.0
 patchesStrategicMerge:
 - ./ingress-patch.yaml
 - ./server-patch.yaml
