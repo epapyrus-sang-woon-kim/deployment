@@ -8,9 +8,9 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
   newTag: snapshot-8bd039fe2aac6678fe586a07708badd207c32c92
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: snapshot-38a3aced0283d60846cd5d8de50706b3f6c06a34
+  newTag: snapshot-91364048702ea866f518d4d902e5ca8d023df814
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: snapshot-38a3aced0283d60846cd5d8de50706b3f6c06a34
+  newTag: snapshot-91364048702ea866f518d4d902e5ca8d023df814
 patchesStrategicMerge:
 - ./ingress-patch.yaml
 - ./server-patch.yaml
