@@ -24,6 +24,9 @@ spec:
             - name: storage
               mountPath: /ePapyrus/sd
               subPath: ./streamdocs
+            - name: storage
+              mountPath: /sample.pdf
+              subPath: ./sample-files/sample.pdf
           env:
             - name: WAIT_FOR_IT
               value: localhost:3306
