@@ -59,6 +59,8 @@ spec:
               value: epapyrus
             - name: SD_ADMIN_PASSWORD
               value: epapyrus12#$
+            - name: VU_ENABLED
+              value: "true"
         - name: mariadb
           image: mariadb:10.7.3
           args:
