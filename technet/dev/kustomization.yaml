@@ -4,7 +4,7 @@ kind: Kustomization
 namespace: technet-dev
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
-  newTag: snapshot-31f2ba6a880d6dad5ff0b1b4cd16880efe602454
+  newTag: snapshot-91cba4993bdcdc0ec8b8a7880714c374db0a752a
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
   newTag: snapshot-a07501aa69cd791ce4376feed90fcf9c1b59de08
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
