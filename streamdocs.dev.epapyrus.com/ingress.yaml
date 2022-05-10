@@ -5,23 +5,9 @@ metadata:
   namespace: default
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
-    nginx.ingress.kubernetes.io/app-root: /streamdocs/view/welcome
+    nginx.ingress.kubernetes.io/app-root: /streamdocs/view/admin
     nginx.ingress.kubernetes.io/proxy-body-size: 100M
     nginx.ingress.kubernetes.io/server-snippet: |
-      set $DENY "";
-
-      if ($uri != "/robots.txt"){
-        set $DENY T;
-      }
-
-      if ($remote_addr != "182.208.21.16") { # ePapyrus HQ
-        set $DENY "${DENY}T";
-      }
-
-      if ($DENY = "TT"){
-        return 302 https://epapyrus.com;
-      }
-
       location /robots.txt {
         add_header Content-Type text/plain;
         return 200 'User-agent: *\nDisallow: /';
