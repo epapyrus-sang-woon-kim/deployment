@@ -51,6 +51,9 @@ spec:
           mountPath: /streamdocs
           subPath: ./streamdocs
         - name: technet-doc
+          mountPath: /pdf-gateway-11
+          subPath: ./pdf-gateway-11
+        - name: technet-doc
           mountPath: /pdf-gateway
           subPath: ./pdf-gateway
       - name: mariadb

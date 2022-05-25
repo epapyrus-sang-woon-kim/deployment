@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pdf-gateway-11-doc
+spec:
+  ports:
+  - protocol: TCP
+    port: 80
+  selector:
+    app: pdf-gateway-11-doc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pdf-gateway-11-doc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pdf-gateway-11-doc
+  template:
+    metadata:
+      labels:
+        app: pdf-gateway-11-doc
+    spec:
+      nodeSelector:
+        technet-doc: ""
+      containers:
+      - name: pdf-gateway-11-doc
+        image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-11-guide-assets:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+        - name: PDF_GATEWAY_11_DOC_VERSION
+          value: 11.0.0.0
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        volumeMounts:
+        - name: technet-doc
+          mountPath: /www2/
+          subPath: ./pdf-gateway-11
+        lifecycle:
+          postStart:
+            exec:
+              command:
+              - sh
+              - -c
+              - rm -rf /www2/${PDF_GATEWAY_11_DOC_VERSION}; cp -rT /www/ /www2/${PDF_GATEWAY_11_DOC_VERSION}; curl http://server.${POD_NAMESPACE}.svc.cluster.local:8080/api/v1/docs
+      volumes:
+      - name: technet-doc
+        persistentVolumeClaim:
+          claimName: technet-doc

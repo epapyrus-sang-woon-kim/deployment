@@ -5,6 +5,7 @@ resources:
 - client.yaml
 - elasticsearch.yaml
 - ingress.yaml
+- pdf-gateway-11-doc.yaml
 - pdf-gateway-doc.yaml
 - server.yaml
 - streamdocs-doc.yaml

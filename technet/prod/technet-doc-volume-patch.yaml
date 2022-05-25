@@ -20,6 +20,16 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: pdf-gateway-11-doc
+spec:
+  template:
+    spec:
+      nodeSelector:
+        technet-doc: prod
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
   name: pdf-gateway-doc
 spec:
   template:

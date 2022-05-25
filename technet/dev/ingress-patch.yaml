@@ -24,6 +24,16 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  name: pdf-gateway-11-doc
+spec:
+  tls:
+  - hosts:
+    - technet.hq.epapyrus.com
+    secretName: technet.hq.epapyrus.com-tls
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
   name: pdf-gateway-doc
 spec:
   tls:

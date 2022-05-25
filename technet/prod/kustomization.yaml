@@ -3,6 +3,8 @@ kind: Kustomization
 
 namespace: technet-prod
 images:
+- name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-11-guide-assets
+  newTag: release-102f3b03210fc8d50489a976755ffae5e8a463c2
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
   newTag: release-102f3b03210fc8d50489a976755ffae5e8a463c2
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
@@ -23,6 +25,13 @@ patchesJson6902:
   target:
     kind: Ingress
     name: technet
+- patch: |
+    - op: replace
+      path: /spec/rules/0/host
+      value: technet.epapyrus.com
+  target:
+    kind: Ingress
+    name: pdf-gateway-11-doc
 - patch: |
     - op: replace
       path: /spec/rules/0/host
