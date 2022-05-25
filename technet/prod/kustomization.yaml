@@ -4,15 +4,15 @@ kind: Kustomization
 namespace: technet-prod
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-11-guide-assets
-  newTag: release-102f3b03210fc8d50489a976755ffae5e8a463c2
+  newTag: release-a4b732ed54164d7084230ec16e64e15fb58e052a
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
   newTag: release-102f3b03210fc8d50489a976755ffae5e8a463c2
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
   newTag: release-6451145605826e2d977d9715066a33fbfdf65037
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: 2.2.0
+  newTag: 2.2.1
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: 2.2.0
+  newTag: 2.2.1
 patchesStrategicMerge:
 - ./ingress-patch.yaml
 - ./server-patch.yaml
