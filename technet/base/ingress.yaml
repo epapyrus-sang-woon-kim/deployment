@@ -41,7 +41,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: pdf-gateway-doc
+                name: pdf-gateway-11-doc
                 port:
                   number: 80
 ---
