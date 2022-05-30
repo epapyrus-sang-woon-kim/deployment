@@ -33,7 +33,7 @@ spec:
         - containerPort: 80
         env:
         - name: PDF_GATEWAY_11_DOC_VERSION
-          value: 11.0.0.0
+          value: 11.1.2.0
         - name: POD_NAMESPACE
           valueFrom:
             fieldRef:
