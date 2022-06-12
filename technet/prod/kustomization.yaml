@@ -38,7 +38,7 @@ patchesJson6902:
       value: technet.epapyrus.com
   target:
     kind: Ingress
-    name: pdf-gateway-doc
+    name: pdf-gateway-10-doc
 - patch: |
     - op: replace
       path: /spec/rules/0/host
