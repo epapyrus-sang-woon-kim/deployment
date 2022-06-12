@@ -31,21 +31,7 @@ patchesJson6902:
       value: technet.hq.epapyrus.com
   target:
     kind: Ingress
-    name: pdf-gateway-11-doc
-- patch: |
-    - op: replace
-      path: /spec/rules/0/host
-      value: technet.hq.epapyrus.com
-  target:
-    kind: Ingress
-    name: pdf-gateway-10-doc
-- patch: |
-    - op: replace
-      path: /spec/rules/0/host
-      value: technet.hq.epapyrus.com
-  target:
-    kind: Ingress
-    name: streamdocs-doc
+    name: technet-doc
 - patch: |
     - op: replace
       path: /spec/rules/0/host

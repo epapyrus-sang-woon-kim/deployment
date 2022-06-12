@@ -28,27 +28,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: pdf-gateway-11-doc
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt
-    nginx.ingress.kubernetes.io/rewrite-target: $1
-spec:
-  ingressClassName: nginx
-  rules:
-    - http:
-        paths:
-          - path: /guide-assets/pdf-gateway-11/11.1.2.0(.*)
-            pathType: Prefix
-            backend:
-              service:
-                name: pdf-gateway-11-doc
-                port:
-                  number: 80
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: pdf-gateway-10-doc
+  name: technet-doc
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/rewrite-target: $1
@@ -64,19 +44,13 @@ spec:
                 name: pdf-gateway-10-doc
                 port:
                   number: 80
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: streamdocs-doc
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt
-    nginx.ingress.kubernetes.io/rewrite-target: $1
-spec:
-  ingressClassName: nginx
-  rules:
-    - http:
-        paths:
+          - path: /guide-assets/pdf-gateway-11/11.1.2.0(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: pdf-gateway-11-doc
+                port:
+                  number: 80
           - path: /guide-assets/streamdocs/5.11.4.0(.*)
             pathType: Prefix
             backend:
