@@ -19,7 +19,6 @@ metadata:
 spec:
   serviceName: newsletter-streamdocs
   replicas: 1
-  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: streamdocs

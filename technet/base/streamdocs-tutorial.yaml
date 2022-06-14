@@ -15,7 +15,6 @@ metadata:
   name: streamdocs-tutorial
 spec:
   replicas: 1
-  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: streamdocs-tutorial

@@ -16,7 +16,6 @@ metadata:
 spec:
   serviceName: server
   replicas: 1
-  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: server
