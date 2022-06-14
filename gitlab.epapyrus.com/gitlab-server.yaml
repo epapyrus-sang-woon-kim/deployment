@@ -6,6 +6,7 @@ metadata:
 spec:
   serviceName: gitlabepapyruscom
   replicas: 1
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       service: gitlab.epapyrus.com

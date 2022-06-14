@@ -18,6 +18,7 @@ metadata:
 spec:
   serviceName: streamdocs
   replicas: 1
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: streamdocs

@@ -19,6 +19,7 @@ metadata:
 spec:
   serviceName: fg-demo-form-gateway
   replicas: 1
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       service: fg-demo

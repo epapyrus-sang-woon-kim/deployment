@@ -6,6 +6,7 @@ metadata:
 spec:
   serviceName: licenseepapyruscom
   replicas: 1
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       service: license.epapyrus.com

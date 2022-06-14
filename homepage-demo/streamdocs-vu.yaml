@@ -18,6 +18,7 @@ metadata:
 spec:
   serviceName: streamdocs-vu
   replicas: 1
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: streamdocs-vu
