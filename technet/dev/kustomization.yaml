@@ -13,6 +13,8 @@ images:
   newTag: snapshot-6e05d48f11b6cc3e8f49f69f1bb3bf1cc0499068
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
   newTag: snapshot-6e05d48f11b6cc3e8f49f69f1bb3bf1cc0499068
+- name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
+  newTag: snapshot-56131056346da8890b5c7c6be9608f0ba947860c
 patchesStrategicMerge:
 - ./ingress-patch.yaml
 - ./server-patch.yaml
