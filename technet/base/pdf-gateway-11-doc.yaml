@@ -32,8 +32,6 @@ spec:
         ports:
         - containerPort: 80
         env:
-        - name: PDF_GATEWAY_11_DOC_VERSION
-          value: 11.1.2.0
         - name: POD_NAMESPACE
           valueFrom:
             fieldRef:
@@ -48,7 +46,7 @@ spec:
               command:
               - sh
               - -c
-              - rm -rf /www2/${PDF_GATEWAY_11_DOC_VERSION}; cp -rT /www/ /www2/${PDF_GATEWAY_11_DOC_VERSION}; curl http://server.${POD_NAMESPACE}.svc.cluster.local:8080/api/v1/docs
+              - rm -rf /www2/*; cp -rT /www/ /www2/; curl http://server.${POD_NAMESPACE}.svc.cluster.local:8080/api/v1/docs?type=pdf-gateway-11
       volumes:
       - name: technet-doc
         persistentVolumeClaim:

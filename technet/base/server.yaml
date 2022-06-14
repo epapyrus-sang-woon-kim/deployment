@@ -33,10 +33,18 @@ spec:
         env:
         - name: WAIT_FOR_IT
           value: localhost:3306
+        - name: STREAMDOCS_DOC_PATH
+          value: file:/streamdocs
         - name: STREAMDOCS_DOC_VERSION
           value: 5.11.4.0
-        - name: PDF_GATEWAY_DOC_VERSION
+        - name: PDF_GATEWAY_10_DOC_PATH
+          value: file:/pdf-gateway-10
+        - name: PDF_GATEWAY_10_DOC_VERSION
           value: 10.11.0.10
+        - name: PDF_GATEWAY_11_DOC_PATH
+          value: file:/pdf-gateway-11
+        - name: PDF_GATEWAY_11_DOC_VERSION
+          value: 11.1.2.0
         - name: DOC_FETCH_SCHEUDLE
           value: 0 0 0 * * *
         - name: DOC_FETCH_COOLDOWN
@@ -48,14 +56,14 @@ spec:
           mountPath: /ePapyrus/technet
           subPath: ./technet
         - name: technet-doc
-          mountPath: /streamdocs
+          mountPath: /streamdocs/5.11.4.0
           subPath: ./streamdocs
         - name: technet-doc
-          mountPath: /pdf-gateway-11
-          subPath: ./pdf-gateway-11
+          mountPath: /pdf-gateway-10/10.11.0.10
+          subPath: ./pdf-gateway-10
         - name: technet-doc
-          mountPath: /pdf-gateway
-          subPath: ./pdf-gateway
+          mountPath: /pdf-gateway-11/11.1.2.0
+          subPath: ./pdf-gateway-11
       - name: mariadb
         image: mariadb:10.7.3
         args:
