@@ -45,6 +45,10 @@ spec:
           value: file:/pdf-gateway-11
         - name: PDF_GATEWAY_11_DOC_VERSION
           value: 11.1.2.0
+        - name: TEXTSENSE_DOC_PATH
+          value: file:/textsense
+        - name: TEXTSENSE_DOC_VERSION
+          value: 1.0.0.0
         - name: DOC_FETCH_SCHEUDLE
           value: 0 0 0 * * *
         - name: DOC_FETCH_COOLDOWN
@@ -64,6 +68,9 @@ spec:
         - name: technet-doc
           mountPath: /pdf-gateway-11/11.1.2.0
           subPath: ./pdf-gateway-11
+        - name: technet-doc
+          mountPath: /textsense/1.0.0.0
+          subPath: ./textsense
       - name: mariadb
         image: mariadb:10.7.3
         args:

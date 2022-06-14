@@ -38,6 +38,16 @@ spec:
         technet-doc: prod
 ---
 apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: textsense-doc
+spec:
+  template:
+    spec:
+      nodeSelector:
+        technet-doc: prod
+---
+apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: server
