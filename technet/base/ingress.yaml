@@ -58,6 +58,13 @@ spec:
                 name: streamdocs-doc
                 port:
                   number: 80
+          - path: /guide-assets/textsense/[0-9.]*/(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: textsense-doc
+                port:
+                  number: 80
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
