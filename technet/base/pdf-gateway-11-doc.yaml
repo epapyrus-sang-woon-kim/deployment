@@ -15,6 +15,7 @@ metadata:
   name: pdf-gateway-11-doc
 spec:
   replicas: 1
+  revisionHistoryLimit: 0
   selector:
     matchLabels:
       app: pdf-gateway-11-doc
