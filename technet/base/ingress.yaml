@@ -31,27 +31,27 @@ metadata:
   name: technet-doc
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
-    nginx.ingress.kubernetes.io/rewrite-target: $1
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   ingressClassName: nginx
   rules:
     - http:
         paths:
-          - path: /guide-assets/pdf-gateway-10/10.11.0.10(.*)
+          - path: /guide-assets/pdf-gateway-10/[0-9.]*/(.*)
             pathType: Prefix
             backend:
               service:
                 name: pdf-gateway-10-doc
                 port:
                   number: 80
-          - path: /guide-assets/pdf-gateway-11/11.1.2.0(.*)
+          - path: /guide-assets/pdf-gateway-11/[0-9.]*/(.*)
             pathType: Prefix
             backend:
               service:
                 name: pdf-gateway-11-doc
                 port:
                   number: 80
-          - path: /guide-assets/streamdocs/5.11.4.0(.*)
+          - path: /guide-assets/streamdocs/[0-9.]*/(.*)
             pathType: Prefix
             backend:
               service:
