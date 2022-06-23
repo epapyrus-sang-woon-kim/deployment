@@ -10,9 +10,9 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
   newTag: snapshot-ee451ba294087f5d0bad63e666d292df3a796b7d
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: snapshot-004d68c67f93b3e21b6167205c22870f8dc1e32e
+  newTag: snapshot-1e644ed603960ca0c683829354eb9f27e68df7eb
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: snapshot-004d68c67f93b3e21b6167205c22870f8dc1e32e
+  newTag: snapshot-1e644ed603960ca0c683829354eb9f27e68df7eb
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
   newTag: snapshot-c71da7406c6b0c982a4dc41d593f932ceb2c45d5
 patchesStrategicMerge:
