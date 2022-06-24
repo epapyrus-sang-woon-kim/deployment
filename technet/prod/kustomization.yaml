@@ -4,15 +4,15 @@ kind: Kustomization
 namespace: technet-prod
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-11-guide-assets
-  newTag: release-a9fcf61b0266aba7ebda6b86b0def49d32ab53b8
+  newTag: release-99da91a9d5c68874335514fa627cfaec85bf08f7
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
-  newTag: release-7ad24d665a13cf13dd5decd6dbf36701612f09c2
+  newTag: release-5afbeab532009c58d8ec438728bb24f0b09c4a1e
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
-  newTag: release-214da6c275ff9d94c8560facc776d61cb3d57cbb
+  newTag: release-0e20cacf36f328a3dbe76b92a6dc2fb08c0e3835
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: 2.3.2
+  newTag: 2.4.0
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: 2.3.2
+  newTag: 2.4.0
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
   newTag: release-56131056346da8890b5c7c6be9608f0ba947860c
 patchesStrategicMerge:
