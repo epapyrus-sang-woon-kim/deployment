@@ -14,7 +14,7 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
   newTag: snapshot-1e644ed603960ca0c683829354eb9f27e68df7eb
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
-  newTag: snapshot-c71da7406c6b0c982a4dc41d593f932ceb2c45d5
+  newTag: snapshot-34e848b05eb741fb058d731b15b6bc262ef7d33f
 patchesStrategicMerge:
 - ./ingress-patch.yaml
 - ./server-patch.yaml
