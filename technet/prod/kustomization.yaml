@@ -8,7 +8,7 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
   newTag: release-5afbeab532009c58d8ec438728bb24f0b09c4a1e
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
-  newTag: release-55c228052709e7ab3ab4739c94da78218e914a8e
+  newTag: release-6e1f34914187f495c00dade5a2448750f13fbdea
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
   newTag: 2.4.0
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
