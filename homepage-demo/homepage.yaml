@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
         - name: homepage
-          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/homepage-demo:1.3.2
+          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/homepage-demo:1.4.0
           imagePullPolicy: Always
           ports:
             - containerPort: 80
