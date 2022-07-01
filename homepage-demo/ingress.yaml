@@ -8,6 +8,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: 100M
     nginx.ingress.kubernetes.io/server-snippet: |
       location /demo/textsense {
+        client_max_body_size 10M;
         rewrite ^/demo/textsense(.*)$ /api$1 break;
         proxy_pass https://textsense.epapyrus.com;
       }
