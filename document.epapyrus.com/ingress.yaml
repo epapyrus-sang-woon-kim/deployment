@@ -5,6 +5,7 @@ metadata:
   namespace: default
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/whitelist-source-range: 182.208.21.16/32
     nginx.ingress.kubernetes.io/app-root: /streamdocs/view/documents
     nginx.ingress.kubernetes.io/proxy-body-size: 100M
     nginx.ingress.kubernetes.io/server-snippet: |
