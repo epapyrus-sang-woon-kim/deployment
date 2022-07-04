@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: contacts-page
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/proxy-body-size: 10M
+    nginx.ingress.kubernetes.io/satisfy: any
+    nginx.ingress.kubernetes.io/whitelist-source-range: 182.208.21.16/32
+    nginx.ingress.kubernetes.io/auth-type: basic
+    nginx.ingress.kubernetes.io/auth-secret: contacts-page-auth
+    nginx.ingress.kubernetes.io/auth-realm: Contacts
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - contacts.epapyrus.com
+      secretName: contacts.epapyrus.com-tls
+  rules:
+    - host: contacts.epapyrus.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: contacts-page
+                port:
+                  number: 80
