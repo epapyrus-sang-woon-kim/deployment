@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: documentepapyruscom-streamdocs
-  namespace: default
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/whitelist-source-range: 182.208.21.16/32
@@ -43,7 +42,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: documentepapyruscom-auth
-  namespace: default
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/auth-type: basic

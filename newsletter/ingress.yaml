@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: newsletter
-  namespace: default
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/proxy-body-size: 100M
@@ -28,7 +27,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: newsletter-block-welcome
-  namespace: default
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/whitelist-source-range: 182.208.21.16/32

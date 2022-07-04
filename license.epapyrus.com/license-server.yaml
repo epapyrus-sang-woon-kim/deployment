@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: licenseepapyruscom
-  namespace: default
 spec:
   serviceName: licenseepapyruscom
   replicas: 1

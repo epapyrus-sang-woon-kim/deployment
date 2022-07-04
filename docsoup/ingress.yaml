@@ -2,7 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: docsoup-client
-  namespace: default
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
@@ -38,7 +37,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: docsoup-server
-  namespace: default
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/rewrite-target: $1
