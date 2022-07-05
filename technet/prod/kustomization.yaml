@@ -10,9 +10,9 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
   newTag: release-d9e4d2a3b4d48b0744264537ad869798585c8e6b
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: 2.4.0
+  newTag: 2.4.1
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: 2.4.0
+  newTag: 2.4.1
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
   newTag: release-ced03316d24e47f137ffbc4390cb9f1e0477f77a
 patchesStrategicMerge:
