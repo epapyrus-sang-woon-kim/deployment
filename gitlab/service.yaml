@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gitlabepapyruscom
+  name: gitlab
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: external
     service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: instance
@@ -24,4 +24,4 @@ spec:
       port: 22
       targetPort: 22
   selector:
-    service: gitlab.epapyrus.com
+    app: gitlab

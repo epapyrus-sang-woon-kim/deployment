@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: gitlabepapyruscom
+  name: gitlab
 spec:
-  serviceName: gitlabepapyruscom
+  serviceName: gitlab
   replicas: 1
   selector:
     matchLabels:
-      service: gitlab.epapyrus.com
+      app: gitlab
   template:
     metadata:
       labels:
-        service: gitlab.epapyrus.com
+        app: gitlab
     spec:
       hostname: gitlab.epapyrus.com
       containers:
         - name: gitlab
-          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/gitlab-ee:14.10.5-ee.0
+          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/gitlab-ee:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 22
