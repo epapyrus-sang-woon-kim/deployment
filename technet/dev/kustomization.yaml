@@ -10,9 +10,9 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
   newTag: snapshot-118775100dc041a857cf97df13a22ab002a09826
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: latest
+  newTag: snapshot-2.5.0-SNAPSHOT
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: latest
+  newTag: snapshot-2.5.0-SNAPSHOT
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
   newTag: snapshot-3b756b4d42b24cf229e00d5ddb0a4cd416693862
 patchesStrategicMerge:
