@@ -4,17 +4,17 @@ kind: Kustomization
 namespace: technet-prod
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-11-guide-assets
-  newTag: release-5512fc85265a303808cb6fdcd49e8a7d7bc516dc
+  newTag: release-c4e4d101c9380bd572cd5def7448d2f6bd7c7efa
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
-  newTag: release-da02aafc7ead2b739e5b62cfbbc83a1e07d9e5e9
+  newTag: release-7969bb39e6590ab203dd8aaa24826f48220e16ef
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
-  newTag: release-c7a8d724e4dff59272a6cb914f56b79748ba569e
+  newTag: release-2a4dce67882fbda6980c5dbf415090307dedcd41
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
   newTag: 2.4.1
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
   newTag: 2.4.1
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
-  newTag: release-ced03316d24e47f137ffbc4390cb9f1e0477f77a
+  newTag: release-04172d17b5adf67afab1fb8af3679b0946fbeb84
 patchesStrategicMerge:
 - ./ingress-patch.yaml
 - ./server-patch.yaml
