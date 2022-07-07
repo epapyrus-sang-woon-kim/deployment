@@ -19,18 +19,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: argocd-server-for-ingress
+                name: argocd-server
                 port:
                   number: 443
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: argocd-server-for-ingress
-spec:
-  ports:
-  - port: 443
-    protocol: TCP
-    targetPort: 8080
-  selector:
-    app.kubernetes.io/name: argocd-server
