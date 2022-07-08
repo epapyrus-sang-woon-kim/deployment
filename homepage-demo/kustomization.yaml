@@ -6,7 +6,7 @@ resources:
 - ingress.yaml
 - streamdocs.yaml
 - streamdocs-vu.yaml
-- homepage.yaml
+- homepage-demo.yaml
 
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/homepage-demo
