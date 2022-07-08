@@ -10,3 +10,5 @@ resources:
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/contacts-page
   newTag: 1.0.0
+- name: alpine
+  newTag: 3.16.0

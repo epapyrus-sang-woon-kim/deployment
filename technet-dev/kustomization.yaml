@@ -15,6 +15,8 @@ images:
   newTag: snapshot-2.5.0-SNAPSHOT
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
   newTag: snapshot-ec257f7b852efc1cfe9ee3edb9664f08b2fbf654
+- name: mariadb
+  newTag: 10.7.3
 patchesStrategicMerge:
 - ./ingress-patch.yaml
 - ./server-patch.yaml

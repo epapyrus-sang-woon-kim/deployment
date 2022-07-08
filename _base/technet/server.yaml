@@ -73,7 +73,7 @@ spec:
           mountPath: /textsense/1.0.0.0
           subPath: ./textsense
       - name: mariadb
-        image: mariadb:10.7.3
+        image: mariadb:latest
         args:
         - --character-set-server=utf8
         - --collation-server=utf8_general_ci

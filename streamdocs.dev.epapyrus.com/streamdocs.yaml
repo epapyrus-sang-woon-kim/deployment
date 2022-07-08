@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: streamdocs
-          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs:5.11.15.0
+          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -47,7 +47,7 @@ spec:
             - name: SD_ADMIN_PASSWORD
               value: epapyrus12#$
         - name: mariadb
-          image: mariadb:10.7.3
+          image: mariadb:latest
           args:
             - --character-set-server=utf8
             - --collation-server=utf8_general_ci

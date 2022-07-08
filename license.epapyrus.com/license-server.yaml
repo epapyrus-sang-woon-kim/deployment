@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: licenseepapyruscom
-          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/simple-license:1.8.2-RELEASE
+          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/simple-license:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

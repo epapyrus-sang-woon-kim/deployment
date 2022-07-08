@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: form-gateway
-          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/form-gateway:fg.demo.epapyrus.com--fg
+          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/form-gateway:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -49,7 +49,7 @@ spec:
               mountPath: /ePapyrus/fg
               subPath: ./form-gateway
         - name: mariadb
-          image: mariadb:10.7.3
+          image: mariadb:latest
           args:
             - --character-set-server=utf8
             - --collation-server=utf8_general_ci

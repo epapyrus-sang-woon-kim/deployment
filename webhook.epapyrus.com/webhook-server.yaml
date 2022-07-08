@@ -39,7 +39,7 @@ spec:
             - name: CODE_REVIEW_COMPLETED_STATUS_ID
               value: IEAAOKQMJMCH7XPZ # 리뷰종료
         - name: mariadb
-          image: mariadb:10.7.3
+          image: mariadb:latest
           args:
             - --character-set-server=utf8
             - --collation-server=utf8_general_ci
