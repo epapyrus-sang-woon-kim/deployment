@@ -4,17 +4,17 @@ kind: Kustomization
 namespace: technet-prod
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-11-guide-assets
-  newTag: release-c0ee11a118df9caab25be51d61d29ba47a3fbbcc
+  newTag: release-17979d1ea5448df48f637a786605971a7020a764
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
-  newTag: release-23e96cc513875d2e68e43afda59b0d1cef32f166
+  newTag: release-672572c6dc7096a99331011428db4946432b383a
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
-  newTag: release-6f657fe3976b07e4d8538c14e8f8ba541b749c1b
+  newTag: release-518e8224e9d9003d1388d28140105e510f2216bf
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
   newTag: release-4ca4b8126af37faeebc28e2d282f7a04114facce
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
   newTag: release-4ca4b8126af37faeebc28e2d282f7a04114facce
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
-  newTag: release-fe0bc92b256b1cc12466b2f7a4216b1c2fb4931c
+  newTag: release-ce2f92bdf3ed3bc9ad0dbdc820bc0684ebaff81d
 - name: mariadb
   newTag: 10.7.3
 patchesStrategicMerge:
