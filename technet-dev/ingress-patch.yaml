@@ -11,18 +11,6 @@ metadata:
       location ~ /guide-assets/pdf-gateway/(.*) {
         return 302 /guide-assets/pdf-gateway-10/$1;
       }
-
-      if ($remote_addr != "182.208.21.16") { # ePapyrus HQ
-        set $unauthorized IP;
-      }
-
-      if ($http_x_epapyrus_private_network != "SandCanyon") {
-        set $unauthorized "${unauthorized},VPN";
-      }
-
-      if ($unauthorized = "IP,VPN") {
-        return 302 https://technet.epapyrus.com$request_uri;
-      }
 spec:
   tls:
   - hosts:
