@@ -81,7 +81,7 @@ spec:
       spec:
         accessModes:
           - ReadWriteOnce
-        storageClassName: ebs
+        storageClassName: ebs-autodelete
         resources:
           requests:
             storage: 4Gi
