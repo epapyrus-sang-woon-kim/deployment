@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: technet-streamdocs
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  selector:
+    service: technet-streamdocs
+---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:

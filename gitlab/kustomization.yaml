@@ -4,7 +4,6 @@ kind: Kustomization
 namespace: default
 resources:
 - gitlab.yaml
-- service.yaml
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/gitlab-ee
   newTag: 15.1.2-ee.0

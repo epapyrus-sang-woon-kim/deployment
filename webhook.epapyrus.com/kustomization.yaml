@@ -4,7 +4,6 @@ kind: Kustomization
 namespace: default
 resources:
 - ingress.yaml
-- service.yaml
 - webhook-server.yaml
 images:
 - name: mariadb

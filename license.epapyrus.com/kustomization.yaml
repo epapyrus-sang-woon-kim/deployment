@@ -5,7 +5,6 @@ namespace: default
 resources:
 - ingress.yaml
 - license-server.yaml
-- service.yaml
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/simple-license
   newTag: 1.8.2-RELEASE

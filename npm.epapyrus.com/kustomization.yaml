@@ -5,7 +5,6 @@ namespace: default
 resources:
 - ingress.yaml
 - npm-registry.yaml
-- service.yaml
 images:
 - name: verdaccio/verdaccio
   newTag: 5.6.2
