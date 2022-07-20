@@ -1,32 +1,27 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: streamdocsdemotechnetepapyruscom-streamdocs
+  name: streamdocs
 spec:
   ports:
-    - name: streamdocs
-      port: 80
-      targetPort: 8080
-      protocol: TCP
+    - protocol: TCP
+      port: 8080
   selector:
-    service: streamdocs.demo.technet.epapyrus.com
     app: streamdocs
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: streamdocsdemotechnetepapyruscom-streamdocs
+  name: streamdocs
 spec:
   serviceName: streamdocs
   replicas: 1
   selector:
     matchLabels:
-      service: streamdocs.demo.technet.epapyrus.com
       app: streamdocs
   template:
     metadata:
       labels:
-        service: streamdocs.demo.technet.epapyrus.com
         app: streamdocs
     spec:
       containers:
