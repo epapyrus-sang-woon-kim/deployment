@@ -6,4 +6,4 @@ resources:
 - gitlab.yaml
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/gitlab-ee
-  newTag: 15.1.2-ee.0
+  newTag: 15.2.0-ee.0
