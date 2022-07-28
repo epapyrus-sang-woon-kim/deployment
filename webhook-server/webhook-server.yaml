@@ -1,29 +1,28 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: webhookepapyruscom
+  name: webhook-server
 spec:
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 3000
+      port: 3000
   selector:
-    service: webhook.epapyrus.com
+    app: webhook-server
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: webhookepapyruscom
+  name: webhook-server
 spec:
-  serviceName: webhookepapyruscom
+  serviceName: webhook-server
   replicas: 1
   selector:
     matchLabels:
-      service: webhook.epapyrus.com
+      app: webhook-server
   template:
     metadata:
       labels:
-        service: webhook.epapyrus.com
+        app: webhook-server
     spec:
       containers:
         - name: webhook-server
@@ -74,7 +73,7 @@ spec:
       spec:
         accessModes:
           - ReadWriteOnce
-        storageClassName: ebs
+        storageClassName: ebs-autodelete
         resources:
           requests:
             storage: 2Gi

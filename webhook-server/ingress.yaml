@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: webhookepapyruscom
+  name: webhook-server
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
 spec:
@@ -18,6 +18,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: webhookepapyruscom
+                name: webhook-server
                 port:
-                  number: 80
+                  number: 3000
