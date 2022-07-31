@@ -39,9 +39,9 @@ spec:
             - name: STREAMDOCS_HOME
               value: /ePapyrus/sd
             - name: MARIADB_USER
-              value: master
+              value: epapyrus
             - name: MARIADB_PASSWORD
-              value: master
+              value: epapyrus12#$
             - name: SD_DATABASE
               value: streamdocs
           volumeMounts:
@@ -57,9 +57,9 @@ spec:
             - name: MARIADB_RANDOM_ROOT_PASSWORD
               value: "true"
             - name: MARIADB_USER
-              value: master
+              value: epapyrus
             - name: MARIADB_PASSWORD
-              value: master
+              value: epapyrus12#$
             - name: MARIADB_DATABASE
               value: streamdocs
           volumeMounts:
