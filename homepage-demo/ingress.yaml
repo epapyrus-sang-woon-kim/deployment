@@ -12,12 +12,12 @@ metadata:
         proxy_pass https://textsense.epapyrus.com;
       }
 
-      location /demo/streamdocs/sample-ids {
+      location /demo/streamdocs/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
         return 200 '["fS558eQl6Ns-koOtbYPwA8Rwd3Ph5UBpCszjDgVOMYk","UBkU_cd6nP3DmIkujMiALBDmuh2uvoJHiPhac5AaMP0","BgrnrhDHwCGXztP4L1mpRfO1p_pNlfGLT7pxq8YN9Co","d-7QhmNm2HI1GstTHcVWNSJNr8B8jL61O_X_sw-u22A","m8GO677DJ74OPTBgfJvEzHLnQy2N2YjKpZE-4BG4ci8"]';
       }
 
-      location /demo/streamdocs-vu/sample-ids {
+      location /demo/streamdocs-vu/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
         return 200 '["-Qb9zCx-mJPq66ilGgpgOaxUS2tgeziyEKIe54M2K88","GhgzOXA3GOyufXCpkahNBODr_C00aqzzsu2VaPqVi0M","I2vcxuuvusGqmceYfU6YYR3dtzJJhM6CYOEBAoWWJho","6DAee7-RSICcDh06HJZn1qlwrM0-8uu-UfI6MiuW1wc","i95N2wgYZvn1JKrLeLjGNr6PqaUVhqYRTLQ6P5iOaLo","dOp0gYWgo_u0QMQZFtoS69phcykXjZilY5DA16jxe-s"]';
       }
