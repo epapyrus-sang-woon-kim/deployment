@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: typedtestepapyruscom-streamdocs
+  name: typed-test
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/app-root: /streamdocs/view/sd
@@ -20,6 +20,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: typedtestepapyruscom-streamdocs
+                name: streamdocs
                 port:
-                  number: 80
+                  number: 8080
