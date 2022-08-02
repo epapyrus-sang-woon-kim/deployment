@@ -20,13 +20,13 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: fg-demo-streamdocs
+                name: streamdocs
                 port:
                   number: 8080
           - path: /fg
             pathType: Prefix
             backend:
               service:
-                name: fg-demo-form-gateway
+                name: form-gateway
                 port:
                   number: 8080
