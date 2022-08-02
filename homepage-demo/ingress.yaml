@@ -60,7 +60,8 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/proxy-body-size: 10M
-    nginx.ingress.kubernetes.io/rewrite-target: $1
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      rewrite ^/api(/files.*)$ $1 break;
 spec:
   ingressClassName: nginx
   tls:
@@ -71,7 +72,7 @@ spec:
     - host: demo.epapyrus.com
       http:
         paths:
-          - path: /api(/files.*)
+          - path: /api/files
             pathType: Prefix
             backend:
               service:
