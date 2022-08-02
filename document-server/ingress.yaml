@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: documentepapyruscom-streamdocs
+  name: document-server
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/whitelist-source-range: 182.208.21.16/32
@@ -27,25 +27,25 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: documentepapyruscom-streamdocs
+                name: streamdocs
                 port:
-                  number: 80
+                  number: 8080
           - path: /streamdocs/v4
             pathType: Prefix
             backend:
               service:
-                name: documentepapyruscom-streamdocs
+                name: streamdocs
                 port:
-                  number: 80
+                  number: 8080
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: documentepapyruscom-auth
+  name: document-server-auth
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/auth-type: basic
-    nginx.ingress.kubernetes.io/auth-secret: documentepapyruscom-auth
+    nginx.ingress.kubernetes.io/auth-secret: document-server-auth
     nginx.ingress.kubernetes.io/auth-realm: Admin
 spec:
   ingressClassName: nginx
@@ -61,6 +61,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: documentepapyruscom-streamdocs
+                name: streamdocs
                 port:
-                  number: 80
+                  number: 8080
