@@ -52,30 +52,3 @@ spec:
                 name: streamdocs-vu
                 port:
                   number: 8080
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: file-server
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt
-    nginx.ingress.kubernetes.io/proxy-body-size: 10M
-    nginx.ingress.kubernetes.io/configuration-snippet: |
-      rewrite ^/api(/files.*)$ $1 break;
-spec:
-  ingressClassName: nginx
-  tls:
-    - hosts:
-        - demo.epapyrus.com
-      secretName: demo.epapyrus.com-tls
-  rules:
-    - host: demo.epapyrus.com
-      http:
-        paths:
-          - path: /api/files
-            pathType: Prefix
-            backend:
-              service:
-                name: file-server
-                port:
-                  number: 8080

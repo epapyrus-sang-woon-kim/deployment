@@ -3,7 +3,6 @@ kind: Kustomization
 
 namespace: homepage-demo
 resources:
-- file-server.yaml
 - ingress.yaml
 - streamdocs.yaml
 - streamdocs-vu.yaml
