@@ -7,6 +7,6 @@ resources:
 - webhook-server.yaml
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/webhook-server
-  newTag: release-85ff03393e17ab9b0ced4a64f5155414d3d21800
+  newTag: release-8b3f58519a6b5a42e0ebcfcd7dbdabd7b0ca4dc5
 - name: mariadb
   newTag: 10.7.3
