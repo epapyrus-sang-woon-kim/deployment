@@ -14,7 +14,7 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
   newTag: snapshot-6a850afacb5c3fab15ec2a14e3933729a8901548
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
-  newTag: snapshot-83bd8e7484e2273b46d31283b37c2d4443047c30
+  newTag: snapshot-5364e9325a3835db2c913c5c1b58f66841d7741f
 - name: mariadb
   newTag: 10.7.3
 patchesStrategicMerge:
