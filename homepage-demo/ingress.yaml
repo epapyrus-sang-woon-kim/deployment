@@ -16,10 +16,18 @@ metadata:
         add_header Content-Type "application/json; charset=utf-8";
         return 200 '["d-7QhmNm2HI1GstTHcVWNSJNr8B8jL61O_X_sw-u22A","m8GO677DJ74OPTBgfJvEzHLnQy2N2YjKpZE-4BG4ci8","fS558eQl6Ns-koOtbYPwA8Rwd3Ph5UBpCszjDgVOMYk","UBkU_cd6nP3DmIkujMiALBDmuh2uvoJHiPhac5AaMP0","BgrnrhDHwCGXztP4L1mpRfO1p_pNlfGLT7pxq8YN9Co"]';
       }
+      
+      location /demo/streamdocs/v4/(.*)/delete {
+        return 403;
+      }
 
       location /demo/streamdocs-vu/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
         return 200 '["6DAee7-RSICcDh06HJZn1qlwrM0-8uu-UfI6MiuW1wc","dOp0gYWgo_u0QMQZFtoS69phcykXjZilY5DA16jxe-s","I2vcxuuvusGqmceYfU6YYR3dtzJJhM6CYOEBAoWWJho","i95N2wgYZvn1JKrLeLjGNr6PqaUVhqYRTLQ6P5iOaLo","GhgzOXA3GOyufXCpkahNBODr_C00aqzzsu2VaPqVi0M","-Qb9zCx-mJPq66ilGgpgOaxUS2tgeziyEKIe54M2K88"]';
+      }
+      
+      location /demo/streamdocs-vu/v4/(.*)/delete {
+        return 403;
       }
 spec:
   ingressClassName: nginx
