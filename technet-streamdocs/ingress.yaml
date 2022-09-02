@@ -6,7 +6,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/proxy-body-size: 100M
     nginx.ingress.kubernetes.io/server-snippet: |
-      location /streamdocs/v4/(.*)/delete {
+      location /streamdocs/v4/documents/(.*)/delete {
         return 403;
       }
 spec:
