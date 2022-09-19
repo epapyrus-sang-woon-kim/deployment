@@ -14,7 +14,7 @@ metadata:
 
       location /demo/streamdocs/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
-        return 200 '["EvA0cmOe9BwvOzK_gsIYgRkbld3294r7jsDHGtcR5a4","m8GO677DJ74OPTBgfJvEzHLnQy2N2YjKpZE-4BG4ci8","3-TDNuLx4KHUa14RxXc2jqy_RQeLSYIFh52RVea4ivk","4rezUaIAVa_JT92frMvdSbKTKlx9-yJblsyEnzHdWFo","EWLdrCVUa0yNIkqKLQu4wUMCENA9knGbBB47fGxOagI"]';
+        return 200 '["o91xvEnH6zgYw9Xeu9rtD8sJWN3u8MrYFbW9bD2MZMg","m8GO677DJ74OPTBgfJvEzHLnQy2N2YjKpZE-4BG4ci8","n7Pcr_qfYMmzDGCVWcKAECzSZBh7jZOZ-NDTS6ssW7I","xk8quXIScxZNIOVmFq9V4T3UngMS995QRkR5jHYOgtE","HrMGF2nMw3QJcff9Osl8bd8Tk8VdfpDM-YG29ldLxn0"]';
       }
       
       location /demo/streamdocs/v4/documents/(.*)/delete {
@@ -23,7 +23,7 @@ metadata:
 
       location /demo/streamdocs-vu/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
-        return 200 '["7A0-as1YAwYZcmcZp1QfQ-sL3tt8DFepSLGLSJM5pNo","SzDg1ItnYocGMy5mtXyNHmjT9Qdu2Gpc_LQ6GS_IORM","I2vcxuuvusGqmceYfU6YYR3dtzJJhM6CYOEBAoWWJho","6DAee7-RSICcDh06HJZn1qlwrM0-8uu-UfI6MiuW1wc","gGvkcVLTGFmVs5GA9oXrUVSLpamDC3xEnvvWbJ90vbM","dOp0gYWgo_u0QMQZFtoS69phcykXjZilY5DA16jxe-s"]';
+        return 200 '["ysWNqWBiDgZzgs-Fs7CgvyXpgKpoI1XeIqW-vqCSqEw","leF-GsSrqmgbybsDoZqkc7ZXYmMKRzBpJ6fQS5vwMFg","I2vcxuuvusGqmceYfU6YYR3dtzJJhM6CYOEBAoWWJho","6DAee7-RSICcDh06HJZn1qlwrM0-8uu-UfI6MiuW1wc","5FkInwt0RWYFp5PSt18N_XYTdI-JQU4OH3F3i3ZKmPg","dOp0gYWgo_u0QMQZFtoS69phcykXjZilY5DA16jxe-s"]';
       }
       
       location /demo/streamdocs-vu/v4/documents/(.*)/delete {
