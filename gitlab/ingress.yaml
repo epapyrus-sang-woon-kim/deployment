@@ -4,6 +4,7 @@ metadata:
   name: gitlab
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/proxy-body-size: 4G
     nginx.ingress.kubernetes.io/backend-protocol: https
 spec:
   ingressClassName: nginx
