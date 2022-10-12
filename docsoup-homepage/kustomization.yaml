@@ -7,6 +7,6 @@ resources:
 - ingress.yaml
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/docsoup-homepage-client
-  newTag: release-ec7146939d546112268cfe19cea8433ae963c3e1
+  newTag: release-e5d29f95801d6c9e7a5b035840fe1df7c54a833a
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/docsoup-homepage-server
-  newTag: release-ec7146939d546112268cfe19cea8433ae963c3e1
+  newTag: release-e5d29f95801d6c9e7a5b035840fe1df7c54a833a
