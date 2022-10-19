@@ -10,8 +10,7 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - docsoup.io
-    - docsoup.net
+    - streamdocs.epapyrus.com
     secretName: docsoup-tls
   rules:
   - host: docsoup.io
