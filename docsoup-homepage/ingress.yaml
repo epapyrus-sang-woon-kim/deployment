@@ -11,7 +11,7 @@ spec:
   tls:
   - hosts:
     - streamdocs.epapyrus.com
-    secretName: docsoup-tls
+    secretName: streamdocs.epapyrus.com-tls
   rules:
   - host: docsoup.io
     http:
