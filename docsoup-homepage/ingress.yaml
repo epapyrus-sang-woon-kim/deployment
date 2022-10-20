@@ -13,24 +13,7 @@ spec:
     - streamdocs.epapyrus.com
     secretName: streamdocs.epapyrus.com-tls
   rules:
-  - host: docsoup.io
-    http:
-      paths:
-      - path: /(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: docsoup-homepage
-            port:
-              number: 80
-      - path: /api/(.*)
-        pathType: Prefix
-        backend:
-          service:
-            name: docsoup-homepage
-            port:
-              number: 8080
-  - host: docsoup.net
+  - host: streamdocs.epapyrus.com
     http:
       paths:
       - path: /(.*)
