@@ -8,13 +8,13 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
   newTag: release-e729b6af2474ddba3b8ae716961e684e2a4ed721
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
-  newTag: release-45188f8ef025f563d89761fb49138384efc46c4f
+  newTag: release-c0568650520b0b7609028f6446bdc828fa979e90
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: release-65c03e923f93c6e67db93fbbe43318cfebdb6c30
+  newTag: release-f739b09b576cc8cbc6b73d175675c36849074c2c
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: release-65c03e923f93c6e67db93fbbe43318cfebdb6c30
+  newTag: release-f739b09b576cc8cbc6b73d175675c36849074c2c
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
-  newTag: release-46f606fc8a7fe210e5b3084442b30b7768961d9c
+  newTag: release-bd8644ef3a11a53a82ae1a46b103cdf7b778eb3a
 - name: mariadb
   newTag: 10.7.3
 patchesStrategicMerge:
