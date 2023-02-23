@@ -13,15 +13,28 @@ metadata:
       }
 
       location /demo/streamdocs/sample-documents {
+        return 301 /demo/streamdocs/ko/sample-documents;
+      }
+      
+      location /demo/streamdocs/ko/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
         return 200 '["wK72YxIoO1xux0sStPs3quVwdf3lyeVi_rs9jAiV0gI","VRA2_rnzjp9grxnhzGZixlrgPcAFhMIDIRvGopPoRW0","n7Pcr_qfYMmzDGCVWcKAECzSZBh7jZOZ-NDTS6ssW7I","xk8quXIScxZNIOVmFq9V4T3UngMS995QRkR5jHYOgtE","HrMGF2nMw3QJcff9Osl8bd8Tk8VdfpDM-YG29ldLxn0"]';
+      }
+      
+      location /demo/streamdocs/en/sample-documents {
+        add_header Content-Type "application/json; charset=utf-8";
+        return 200 '["BtOzTtwrXz-v-W8o8vZeOdj1IMZbMOBzddJ1bgVBRng","1LUvppmCErexxz1uvLRzINXTk9r1pVOqX9E8miWARcA","aLbh598GDoi4GFE63dglAvnKlrg7NHBuAeah5z-DqUE","YeI01EH9wwewDR5PNLToBRrcJRZ5qDP29GBMK73m5S4","h40q6CJyiRzSfcu26ggkA9cRlhF06NvB8i259PkkN4I"]';
       }
       
       location /demo/streamdocs/v4/documents/(.*)/delete {
         return 403;
       }
-
+      
       location /demo/streamdocs-vu/sample-documents {
+        return 301 /demo/streamdocs-vu/ko/sample-documents;
+      }
+
+      location /demo/streamdocs-vu/ko/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
         return 200 '["ysWNqWBiDgZzgs-Fs7CgvyXpgKpoI1XeIqW-vqCSqEw","leF-GsSrqmgbybsDoZqkc7ZXYmMKRzBpJ6fQS5vwMFg","eCio0R9NRLXVHEmmGUbcO1riWwY2e9terLy2lIBLJg0","6DAee7-RSICcDh06HJZn1qlwrM0-8uu-UfI6MiuW1wc","5FkInwt0RWYFp5PSt18N_XYTdI-JQU4OH3F3i3ZKmPg","dOp0gYWgo_u0QMQZFtoS69phcykXjZilY5DA16jxe-s"]';
       }
