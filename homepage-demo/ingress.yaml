@@ -41,7 +41,7 @@ metadata:
       
       location /demo/streamdocs-vu/en/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
-        return 200 '["FSvmsiNWBKjOsChXUhTK4TmQBLVbg_dBIsMH5E5icrI","wGwdePWqAIJNvate02cq4dNTIaVSdzFgEOCAwCoOgv0","qvaBT2tGcsopQWJg7g71RRrYzJbQefDZ7EID0l9AVWY","kJhigeM7U15-x0y7IalJlmxtAoDp_d4t6EuMhp6-zFg","zlG8hw9Pn0EDvLo6pHedBPkJsL7_2mdBEbTDGMKe-Ow"]';
+        return 200 '["e8bS23jq60LEuR6qwvuoR_A9yZ7GDEApK0DH8lPyXao","wGwdePWqAIJNvate02cq4dNTIaVSdzFgEOCAwCoOgv0","qvaBT2tGcsopQWJg7g71RRrYzJbQefDZ7EID0l9AVWY","kJhigeM7U15-x0y7IalJlmxtAoDp_d4t6EuMhp6-zFg","zlG8hw9Pn0EDvLo6pHedBPkJsL7_2mdBEbTDGMKe-Ow"]';
       }
       
       location /demo/streamdocs-vu/v4/documents/(.*)/delete {
