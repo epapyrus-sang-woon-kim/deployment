@@ -18,12 +18,12 @@ metadata:
       
       location /demo/streamdocs/ko/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
-        return 200 '["wK72YxIoO1xux0sStPs3quVwdf3lyeVi_rs9jAiV0gI","VRA2_rnzjp9grxnhzGZixlrgPcAFhMIDIRvGopPoRW0","n7Pcr_qfYMmzDGCVWcKAECzSZBh7jZOZ-NDTS6ssW7I","xk8quXIScxZNIOVmFq9V4T3UngMS995QRkR5jHYOgtE","HrMGF2nMw3QJcff9Osl8bd8Tk8VdfpDM-YG29ldLxn0"]';
+        return 200 '["wK72YxIoO1xux0sStPs3quVwdf3lyeVi_rs9jAiV0gI","VRA2_rnzjp9grxnhzGZixlrgPcAFhMIDIRvGopPoRW0","n7Pcr_qfYMmzDGCVWcKAECzSZBh7jZOZ-NDTS6ssW7I","xk8quXIScxZNIOVmFq9V4T3UngMS995QRkR5jHYOgtE","HrMGF2nMw3QJcff9Osl8bd8Tk8VdfpDM-YG29ldLxn0","6Girrk4AVNad_Bd3SY3_nP2IeFh8n5WT6TWJ1OdrkuU","tD1Xt9cMehGF9035J-grr4Rh9sloFSH9jiOiuqamkvY"]';
       }
       
       location /demo/streamdocs/en/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
-        return 200 '["3Ro51iCUdL9HVtCjdCEZbS702GWEFGQwhx70b5PDyfA","m9hIv1wuQxEDRIEuA82CLIzQ2I0fsx4-wgAjN0T19P4","aoyTo8htuax-JhM8ehG6UL1_ctSRqYrCLx_7_WvO_XI","1dEC8AE_8qgGMZLlEBQxxDOhTnIOdC-pMf8MH1syxwQ","TAempnO_6mJh7Jdd9fipuaGJxumf04DR0etioM_66sE","Os0nYh_AGkX0DpSQ-1Q9ug-XjNzmn_dM2lJy08OmC8Q"]';
+        return 200 '["3Ro51iCUdL9HVtCjdCEZbS702GWEFGQwhx70b5PDyfA","m9hIv1wuQxEDRIEuA82CLIzQ2I0fsx4-wgAjN0T19P4","aoyTo8htuax-JhM8ehG6UL1_ctSRqYrCLx_7_WvO_XI","1dEC8AE_8qgGMZLlEBQxxDOhTnIOdC-pMf8MH1syxwQ","TAempnO_6mJh7Jdd9fipuaGJxumf04DR0etioM_66sE","Os0nYh_AGkX0DpSQ-1Q9ug-XjNzmn_dM2lJy08OmC8Q","6Girrk4AVNad_Bd3SY3_nP2IeFh8n5WT6TWJ1OdrkuU","tD1Xt9cMehGF9035J-grr4Rh9sloFSH9jiOiuqamkvY"]';
       }
       
       location /demo/streamdocs/v4/documents/(.*)/delete {
