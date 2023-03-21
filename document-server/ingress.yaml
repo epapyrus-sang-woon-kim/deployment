@@ -12,7 +12,7 @@ metadata:
         if ($request_method = GET) {
           return 401;
         }
-        proxy_pass https://localhost:8080;
+        proxy_pass http://streamdocs.document-server.svc.cluster.local:8080;
       }
 spec:
   ingressClassName: nginx
