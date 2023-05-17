@@ -10,7 +10,7 @@ resources:
 
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/homepage-demo
-  newTag: release-a3175b7cf2b389709171ccedc1cd8f89168da4a5
+  newTag: release-8904f6aa8d5b8d52c78b49e64e09c6e735a758d4
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs
   newTag: 5.11.40.0-RELEASE
 - name: mariadb
