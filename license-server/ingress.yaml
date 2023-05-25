@@ -4,7 +4,6 @@ metadata:
   name: license-server
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
-    nginx.ingress.kubernetes.io/rewrite-target: /license-server/$1
 spec:
   ingressClassName: nginx
   tls:

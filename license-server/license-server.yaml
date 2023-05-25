@@ -33,6 +33,9 @@ spec:
           volumeMounts:
             - name: storage
               mountPath: /home/redmine/data/license-server/h2/
+          env:
+            - name: LICENSE_AUTH_PASSWORD
+              value: "tkfkddl12#$"
   volumeClaimTemplates:
     - metadata:
         name: storage
