@@ -14,7 +14,7 @@ spec:
     - host: license.epapyrus.com
       http:
         paths:
-          - path: /(.*)
+          - path: /
             pathType: Prefix
             backend:
               service:
