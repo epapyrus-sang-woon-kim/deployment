@@ -4,6 +4,12 @@ metadata:
   name: license-server
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/server-snippet: |
+      location /papypapy {
+        allow 182.208.21.16;
+        deny all;
+        proxy_pass http://license-server.epapyrus.svc.cluster.local:8080;
+      }
 spec:
   ingressClassName: nginx
   tls:
