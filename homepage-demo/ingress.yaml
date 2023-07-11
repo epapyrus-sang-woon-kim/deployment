@@ -49,14 +49,14 @@ metadata:
         return 403;
       }
 
-      location ~ /demo/streamdocs/v4/documents/([^/]*)$ {
+      location ~* "^/demo/streamdocs/v4/documents/([^/?#]){43}/?$" {
         if ($request_method = GET) {
           return 401;
         }
         proxy_pass http://streamdocs.homepage-demo.svc.cluster.local:8080;
       }
 
-      location ~ /demo/streamdocs-vu/v4/documents/([^/]*)$ {
+      location ~* "^/demo/streamdocs-vu/v4/documents/([^/?#]){43}/?$" {
         if ($request_method = GET) {
           return 401;
         }
