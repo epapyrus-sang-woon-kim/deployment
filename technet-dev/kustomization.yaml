@@ -8,7 +8,7 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
   newTag: snapshot-e634132bf3fd5c96b79e14361284102c624fa055
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
-  newTag: snapshot-2e04d4fba0f7928285c3ade0c0b39114fdb1b9f4
+  newTag: snapshot-f27807f827679a24ced5989f33055443783668f0
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
   newTag: snapshot-8a183992c9442aeca2ea8e41be87a49025a7e0c3
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
