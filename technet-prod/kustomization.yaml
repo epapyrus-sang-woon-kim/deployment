@@ -10,9 +10,9 @@ images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
   newTag: release-cfe49eb80e4df984011d6566ed481d525d24b775
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: release-b92453a3251897f123710557190b0b2fb11ea14f
+  newTag: release-88df2b0a6187223e0706634fe4669247e73bbcb8
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: release-b92453a3251897f123710557190b0b2fb11ea14f
+  newTag: release-88df2b0a6187223e0706634fe4669247e73bbcb8
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
   newTag: release-dc3265d0a7078717b1b5dd572c38eb61fbd43c14
 - name: mariadb
