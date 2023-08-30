@@ -37,12 +37,12 @@ metadata:
 
       location /demo/streamdocs-vu/ko/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
-        return 200 '["ysWNqWBiDgZzgs-Fs7CgvyXpgKpoI1XeIqW-vqCSqEw","leF-GsSrqmgbybsDoZqkc7ZXYmMKRzBpJ6fQS5vwMFg","eCio0R9NRLXVHEmmGUbcO1riWwY2e9terLy2lIBLJg0","6DAee7-RSICcDh06HJZn1qlwrM0-8uu-UfI6MiuW1wc","5FkInwt0RWYFp5PSt18N_XYTdI-JQU4OH3F3i3ZKmPg","dOp0gYWgo_u0QMQZFtoS69phcykXjZilY5DA16jxe-s"]';
+        return 200 '["Syn2rMQVgfaj0O28dNYsnWtk-7psj5NF8po7sjcxbmI","EMsFTB4vlQuigKn0cbDiYgLB25HDy1S2XmEoyvcMTec","TeVAf-jX2E3-DiCp9_V7zh-nIN5q-dlqgl6N5kiu36c","zFhkA6og843N0OHibb4WPZfgwANBxg7op0w1ZRkpxas","lZbwJ1yzzihSEW3At9ha_MwwEfVDXw02GzOLH6OhykQ","hF7rJqr3GtRkvCRzCweVcM5_KwpG70QtbblrxioN_5s"]';
       }
       
       location /demo/streamdocs-vu/en/sample-documents {
         add_header Content-Type "application/json; charset=utf-8";
-        return 200 '["e8bS23jq60LEuR6qwvuoR_A9yZ7GDEApK0DH8lPyXao","wGwdePWqAIJNvate02cq4dNTIaVSdzFgEOCAwCoOgv0","qvaBT2tGcsopQWJg7g71RRrYzJbQefDZ7EID0l9AVWY","kJhigeM7U15-x0y7IalJlmxtAoDp_d4t6EuMhp6-zFg","zlG8hw9Pn0EDvLo6pHedBPkJsL7_2mdBEbTDGMKe-Ow"]';
+        return 200 '["DrrOrSv_97IDy0cAJsQMYuk9UPyEhcVY9R-OPujcFrA","gJLck-2fZ8rSo31H_nw-H0_zsSPYJVdgbgLDPEvJFkA","zYd3O317JLEsRbkhD2JtvPHofSWK26MBuOnqbFJ9wMA","KiZDbjvwJmxen2C8np6i6SPQuLXHNiWouBqP9MfVoTM","YmsTyQDyKJ4lTbWKDyjscVHQGXUr5JtNAob9PMyQkWo"]';
       }
       
       location /demo/streamdocs-vu/v4/documents/(.*)/delete {
