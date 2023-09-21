@@ -12,6 +12,10 @@ metadata:
         return 302 /guide-assets/pdf-gateway-10/$1;
       }
 
+      location ~ /guide-assets/streamdocs-vu/(.*) {
+        rewrite ^/guide-assets/streamdocs-vu/(.*)$ /guide-assets/streamdocs/$1;
+      }
+
       if ($remote_addr != "182.208.21.16") { # ePapyrus HQ
         set $unauthorized IP;
       }
