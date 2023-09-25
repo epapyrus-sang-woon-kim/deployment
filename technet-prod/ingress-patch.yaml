@@ -11,6 +11,10 @@ metadata:
       location ~ /guide-assets/pdf-gateway/(.*) {
         return 302 /guide-assets/pdf-gateway-10/$1;
       }
+
+      location ~ /guide-assets/streamdocs-vu/(.*) {
+        rewrite ^/guide-assets/streamdocs-vu/(.*)$ /guide-assets/streamdocs/$1;
+      }
 spec:
   tls:
   - hosts:
