@@ -43,8 +43,10 @@ spec:
               value: epapyrus
             - name: SD_JDBC_PASSWORD
               value: epapyrus12#$
-            - name: JAVA_OPTS
-              value: -Dspring.profiles.active=mysql
+            - name: SD_JDBC_DRIVER_CLASS
+              value: org.mariadb.jdbc.Driver
+            - name: SD_HIBERNATE_DIALECT
+              value: org.hibernate.dialect.MySQL5Dialect
           volumeMounts:
             - name: storage
               mountPath: /ePapyrus/sd
