@@ -36,7 +36,13 @@ spec:
             - containerPort: 8080
           env:
             - name: WAIT_FOR_IT
-              value: db:3306
+              value: 'localhost:3306'
+            - name: SD_JDBC_URL
+              value: 'jdbc:mariadb://localhost:3306/streamdocs'
+            - name: SD_JDBC_USERNAME
+              value: epapyrus
+            - name: SD_JDBC_PASSWORD
+              value: epapyrus12#$
             - name: JAVA_OPTS
               value: -Dspring.profiles.active=mysql
           volumeMounts:
