@@ -7,4 +7,4 @@ resources:
 - license-server.yaml
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/simple-license
-  newTag: 1.9.5-RELEASE
+  newTag: 1.9.6-RELEASE
