@@ -84,4 +84,4 @@ spec:
         storageClassName: ebs
         resources:
           requests:
-            storage: 4Gi
+            storage: 5Gi
