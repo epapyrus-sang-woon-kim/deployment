@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: textsense-legacy-demo
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/proxy-body-size: 100M
+    nginx.ingress.kubernetes.io/proxy-read-timeout: 600
+    nginx.ingress.kubernetes.io/server-snippet: |
+      location /demo/textsense {
+        client_max_body_size 10M;
+        rewrite ^/demo/textsense(.*)$ /api$1 break;
+        proxy_pass https://textsense.epapyrus.com;
+      }
+      
+      location /demo/streamdocs {
+        proxy_pass http://streamdocs.homepage-demo.svc.cluster.local:8080;
+      }
+
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - legacy-demo.epapyrus.com
+      secretName: legacy-demo.epapyrus.com-tls
+  rules:
+    - host: legacy-demo.epapyrus.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: textsense-legacy-demo
+                port:
+                  number: 80
