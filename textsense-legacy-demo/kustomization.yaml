@@ -3,5 +3,6 @@ kind: Kustomization
 
 namespace: textsense-legacy-demo
 resources:
+- secret.yaml
 - ingress.yaml
 - textsense-legacy-demo.yaml
