@@ -7,7 +7,6 @@ resources:
 - streamdocs.yaml
 - streamdocs-vu.yaml
 - homepage-demo.yaml
-- textsense-demo-legacy.yaml
 
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/homepage-demo

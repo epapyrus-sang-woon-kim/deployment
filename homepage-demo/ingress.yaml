@@ -12,26 +12,6 @@ metadata:
         rewrite ^/demo/textsense(.*)$ /api$1 break;
         proxy_pass https://textsense.epapyrus.com;
       }
-      
-      location ~ /legacy/demo/streamdocs/v4(.*) {
-        rewrite ^/legacy/demo/streamdocs/v4(.*)$ /demo/streamdocs/v4$1;
-        proxy_pass http://streamdocs.homepage-demo.svc.cluster.local:8080;
-      }
-      
-      location ~ /legacy/demo/streamdocs(.*) {
-        rewrite ^/legacy/demo/streamdocs(.*)$ /demo/streamdocs$1 redirect;
-      }
-      
-      location /legacy/demo/textsense {
-        client_max_body_size 10M;
-        rewrite ^/legacy/demo/textsense(.*)$ /api$1 break;
-        proxy_pass https://textsense.epapyrus.com;
-      }
-      
-      location /legacy {
-        rewrite ^/legacy(.*)$ $1?$args break;
-        proxy_pass http://textsense-demo-legacy.homepage-demo.svc.cluster.local:80;
-      }
 
       location /demo/streamdocs/sample-documents {
         return 301 /demo/streamdocs/ko/sample-documents;
@@ -78,13 +58,6 @@ spec:
     - host: demo.epapyrus.com
       http:
         paths:
-          - path: /legacy
-            pathType: Exact
-            backend:
-              service:
-                name: textsense-demo-legacy
-                port:
-                  number: 80
           - path: /
             pathType: Prefix
             backend:
