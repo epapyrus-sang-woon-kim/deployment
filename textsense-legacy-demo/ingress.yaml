@@ -17,6 +17,7 @@ metadata:
       }
       
       location /demo/streamdocs {
+        client_max_body_size 10M;
         proxy_set_header Authorization "";
         proxy_pass http://streamdocs.homepage-demo.svc.cluster.local:8080;
       }
