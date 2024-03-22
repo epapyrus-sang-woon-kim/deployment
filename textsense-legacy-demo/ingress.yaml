@@ -17,6 +17,7 @@ metadata:
       }
       
       location /demo/streamdocs {
+        proxy_hide_header Authorization;
         proxy_pass http://streamdocs.homepage-demo.svc.cluster.local:8080;
       }
 
