@@ -59,6 +59,8 @@ spec:
               value: epapyrus12#$
             - name: VU_ENABLED
               value: "true"
+            - name: SD_RENDERING_IMAGE_BASE_RESOLUTION
+              value: "ULTRA_HD_PORTRAIT"
         - name: mariadb
           image: mariadb:latest
           args:
