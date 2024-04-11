@@ -7,6 +7,6 @@ resources:
 - streamdocs.yaml
 images:
 - name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs
-  newTag: 5.12.34.2-RELEASE
+  newTag: 5.12.35.0-RELEASE
 - name: mariadb
   newTag: 10.7.3
