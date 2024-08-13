@@ -10,10 +10,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - gitlab.epapyrus.com
+    - gitlab.test.epapyrus.com
     secretName: gitlab-tls
   rules:
-  - host: gitlab.epapyrus.com
+  - host: gitlab.test.epapyrus.com
     http:
       paths:
       - path: /

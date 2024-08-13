@@ -35,6 +35,6 @@ spec:
           value: |
             -Dfile.encoding=utf-8
             -Dserver.port=8080
-            -Dtechnet.streamdocs.server.path=https://test-api.technet.epapyrus.com/streamdocs
+            -Dtechnet.streamdocs.server.path=https://test-api.technet.test.epapyrus.com/streamdocs
             -Dcom.epapyrus.pdf.sd.client.auth.id=epapyrus
             -Dcom.epapyrus.pdf.sd.client.auth.password=epapyrus12#$

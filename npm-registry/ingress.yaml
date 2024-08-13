@@ -9,10 +9,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - npm.epapyrus.com
-    secretName: npm.epapyrus.com-tls
+    - npm.test.epapyrus.com
+    secretName: npm.test.epapyrus.com-tls
   rules:
-    - host: npm.epapyrus.com
+    - host: npm.test.epapyrus.com
       http:
         paths:
           - path: /

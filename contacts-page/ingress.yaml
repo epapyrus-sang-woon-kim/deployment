@@ -14,10 +14,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - contacts.epapyrus.com
-      secretName: contacts.epapyrus.com-tls
+        - contacts.test.epapyrus.com
+      secretName: contacts.test.epapyrus.com-tls
   rules:
-    - host: contacts.epapyrus.com
+    - host: contacts.test.epapyrus.com
       http:
         paths:
           - path: /

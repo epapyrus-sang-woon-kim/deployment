@@ -39,10 +39,10 @@ spec:
         imagePullPolicy: Always
         env:
         - name: SENDER_EMAIL
-          value: develop@epapyrus.com
+          value: develop@test.epapyrus.com
         - name: SENDER_PASSWORD
           value: wjsroddl12#$#$
         - name: RECEIVER_EMAIL
-          value: support@epapyrus.com
+          value: support@test.epapyrus.com
         ports:
         - containerPort: 8080

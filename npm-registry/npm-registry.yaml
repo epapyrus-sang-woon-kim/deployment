@@ -32,7 +32,7 @@ spec:
             - containerPort: 4873
           env:
             - name: VERDACCIO_PUBLIC_URL
-              value: https://npm.epapyrus.com
+              value: https://npm.test.epapyrus.com
           volumeMounts:
             - name: storage
               mountPath: /verdaccio/conf

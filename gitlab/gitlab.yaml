@@ -28,7 +28,7 @@ spec:
       labels:
         app: gitlab
     spec:
-      hostname: gitlab.epapyrus.com
+      hostname: gitlab.test.epapyrus.com
       containers:
         - name: gitlab
           image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/gitlab-ee:latest

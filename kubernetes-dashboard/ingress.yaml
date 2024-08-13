@@ -9,10 +9,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - dashboard.k8s.epapyrus.com
-    secretName: dashboard.k8s.epapyrus.com-tls
+    - dashboard.k8s.test.epapyrus.com
+    secretName: dashboard.k8s.test.epapyrus.com-tls
   rules:
-    - host: dashboard.k8s.epapyrus.com
+    - host: dashboard.k8s.test.epapyrus.com
       http:
         paths:
           - path: /
