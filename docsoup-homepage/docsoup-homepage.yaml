@@ -30,12 +30,12 @@ spec:
     spec:
       containers:
       - name: client
-        image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/docsoup-homepage-client:latest
+        image: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/docsoup-homepage-client:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
       - name: server
-        image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/docsoup-homepage-server:latest
+        image: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/docsoup-homepage-server:latest
         imagePullPolicy: Always
         env:
         - name: SENDER_EMAIL

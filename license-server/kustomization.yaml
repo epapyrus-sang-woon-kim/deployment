@@ -6,5 +6,5 @@ resources:
 - ingress.yaml
 - license-server.yaml
 images:
-- name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/simple-license
+- name: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/simple-license
   newTag: 1.10.0-RELEASE

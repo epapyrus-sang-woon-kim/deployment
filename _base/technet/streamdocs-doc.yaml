@@ -28,7 +28,7 @@ spec:
         technet-doc: ""
       containers:
       - name: streamdocs-doc
-        image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets:latest
+        image: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80

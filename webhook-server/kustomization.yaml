@@ -6,7 +6,7 @@ resources:
 - ingress.yaml
 - webhook-server.yaml
 images:
-- name: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/webhook-server
+- name: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/webhook-server
   newTag: release-dff685c5f5b30730879bec0cc8001d91bc53115c
 - name: mariadb
   newTag: 10.7.3

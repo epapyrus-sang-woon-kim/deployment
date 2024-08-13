@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: streamdocs-tutorial
-        image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/utils:technet-streamdocs-tutorial
+        image: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/utils:technet-streamdocs-tutorial
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

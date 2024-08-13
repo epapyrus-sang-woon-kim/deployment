@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: elasticsearch
-        image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/utils:technet-elasticsearch
+        image: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/utils:technet-elasticsearch
         imagePullPolicy: Always
         ports:
         - containerPort: 9200

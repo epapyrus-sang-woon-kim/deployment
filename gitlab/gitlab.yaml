@@ -31,7 +31,7 @@ spec:
       hostname: gitlab.test.epapyrus.com
       containers:
         - name: gitlab
-          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/gitlab-ee:latest
+          image: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/gitlab-ee:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 22

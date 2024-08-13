@@ -36,7 +36,7 @@ spec:
             mountPath: /src/www/
       containers:
         - name: contacts-page
-          image: 730490031339.dkr.ecr.ap-northeast-2.amazonaws.com/utils:latest
+          image: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/utils:latest
           imagePullPolicy: Always
           volumeMounts:
           - name: storage
