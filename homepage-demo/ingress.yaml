@@ -10,7 +10,7 @@ metadata:
       location /demo/textsense {
         client_max_body_size 10M;
         rewrite ^/demo/textsense(.*)$ /api$1 break;
-        proxy_pass https://textsense.test.epapyrus.com;
+        proxy_pass https://textsense.epapyrus.com;
       }
 
       location /demo/streamdocs/sample-documents {
@@ -52,10 +52,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - demo.test.epapyrus.com
-      secretName: demo.test.epapyrus.com-tls
+        - demo.epapyrus.com
+      secretName: demo.epapyrus.com-tls
   rules:
-    - host: demo.test.epapyrus.com
+    - host: demo.epapyrus.com
       http:
         paths:
           - path: /
