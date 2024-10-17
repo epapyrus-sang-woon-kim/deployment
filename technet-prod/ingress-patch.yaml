@@ -18,8 +18,8 @@ metadata:
 spec:
   tls:
   - hosts:
-    - technet.test.epapyrus.com
-    secretName: technet.test.epapyrus.com-tls
+    - technet.epapyrus.com
+    secretName: technet.epapyrus.com-tls
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -28,8 +28,8 @@ metadata:
 spec:
   tls:
   - hosts:
-    - technet.test.epapyrus.com
-    secretName: technet.test.epapyrus.com-tls
+    - technet.epapyrus.com
+    secretName: technet.epapyrus.com-tls
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -38,5 +38,5 @@ metadata:
 spec:
   tls:
   - hosts:
-    - technet.test.epapyrus.com
-    secretName: technet.test.epapyrus.com-tls
+    - technet.epapyrus.com
+    secretName: technet.epapyrus.com-tls
