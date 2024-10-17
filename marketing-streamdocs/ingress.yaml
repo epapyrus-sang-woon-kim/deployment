@@ -15,10 +15,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - streamdocs.dev.test.epapyrus.com
-    secretName: streamdocs.dev.test.epapyrus.com-tls
+    - streamdocs.dev.epapyrus.com
+    secretName: streamdocs.dev.epapyrus.com-tls
   rules:
-    - host: streamdocs.dev.test.epapyrus.com
+    - host: streamdocs.dev.epapyrus.com
       http:
         paths:
           - path: /streamdocs
