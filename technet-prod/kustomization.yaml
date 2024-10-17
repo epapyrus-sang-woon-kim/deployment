@@ -4,17 +4,17 @@ kind: Kustomization
 namespace: technet-prod
 images:
 - name: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-11-guide-assets
-  newTag: release-a6887cf4c9ee1708846f8886136b531c36491c77
+  newTag: release-f99900a68f68e1bdbebb0fee7ef72ede2cb319b3
 - name: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/pdf-gateway-guide-assets
-  newTag: release-11ec347759197f11feca2218e120ad295c6d6d0d
+  newTag: release-b4791d0b2c774408ca4906ab27f2f84beca867db
 - name: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/streamdocs-guide-assets
-  newTag: release-c46ba99849a6ce1417f3e17413007cbe4aeda7ad
+  newTag: release-3776d5a379f607c3d05ba683244e510153e956e2
 - name: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/technet-client
-  newTag: release-1e30ae0d9e109815d94de868097dd1f02d9c4263
+  newTag: release-095262602415ac6059e35564d5475c886edd2db6
 - name: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/technet-server
-  newTag: release-1e30ae0d9e109815d94de868097dd1f02d9c4263
+  newTag: release-095262602415ac6059e35564d5475c886edd2db6
 - name: 010438473788.dkr.ecr.ap-northeast-2.amazonaws.com/textsense-guide-assets
-  newTag: release-adcd10813ca1e2487118ded77f4140a84047e688
+  newTag: release-380fa8ea23d6fae69a53e3c17f34bee06ea84393
 - name: mariadb
   newTag: 10.7.3
 patchesStrategicMerge:
