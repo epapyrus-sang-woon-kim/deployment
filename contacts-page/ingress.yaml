@@ -14,8 +14,8 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - contacts.test.epapyrus.com
-      secretName: contacts.test.epapyrus.com-tls
+        - contacts.epapyrus.com
+      secretName: contacts.epapyrus.com-tls
   rules:
     - host: contacts.test.epapyrus.com
       http:
