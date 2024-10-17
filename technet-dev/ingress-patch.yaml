@@ -25,13 +25,13 @@ metadata:
       }
 
       if ($unauthorized = "IP,VPN") {
-        return 302 https://technet.test.epapyrus.com$request_uri;
+        return 302 https://technet.epapyrus.com$request_uri;
       }
 spec:
   tls:
   - hosts:
-    - technet.hq.test.epapyrus.com
-    secretName: technet.hq.test.epapyrus.com-tls
+    - technet.hq.epapyrus.com
+    secretName: technet.hq.epapyrus.com-tls
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -40,8 +40,8 @@ metadata:
 spec:
   tls:
   - hosts:
-    - technet.hq.test.epapyrus.com
-    secretName: technet.hq.test.epapyrus.com-tls
+    - technet.hq.epapyrus.com
+    secretName: technet.hq.epapyrus.com-tls
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -50,5 +50,5 @@ metadata:
 spec:
   tls:
   - hosts:
-    - technet.hq.test.epapyrus.com
-    secretName: technet.hq.test.epapyrus.com-tls
+    - technet.hq.epapyrus.com
+    secretName: technet.hq.epapyrus.com-tls
