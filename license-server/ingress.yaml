@@ -14,10 +14,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - license.test.epapyrus.com
-    secretName: license.test.epapyrus.com-tls
+    - license.epapyrus.com
+    secretName: license.epapyrus.com-tls
   rules:
-    - host: license.test.epapyrus.com
+    - host: license.epapyrus.com
       http:
         paths:
           - path: /
