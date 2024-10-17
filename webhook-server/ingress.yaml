@@ -8,10 +8,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - webhook.test.epapyrus.com
-    secretName: webhook.test.epapyrus.com-tls
+    - webhook.epapyrus.com
+    secretName: webhook.epapyrus.com-tls
   rules:
-    - host: webhook.test.epapyrus.com
+    - host: webhook.epapyrus.com
       http:
         paths:
           - path: /
