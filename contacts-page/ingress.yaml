@@ -17,7 +17,7 @@ spec:
         - contacts.epapyrus.com
       secretName: contacts.epapyrus.com-tls
   rules:
-    - host: contacts.test.epapyrus.com
+    - host: contacts.epapyrus.com
       http:
         paths:
           - path: /
